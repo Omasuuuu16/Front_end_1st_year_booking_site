@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta 
+        name="viewport"
+        content="width=device-width,initial-scale=1.0"> 
+    <title>Istanbul</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <style>
+
+.box-omar{
+    background-color:rgb(60, 60, 65);
+    color: #ffffff;
+    font-size: 22px;
+    font-family: "Dancing Script", cursive;
+    padding: 10px 20px;
+    position:sticky;
+    top:0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    display:inline-flex;
+    align-items: center;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000 ;
+}
+
+.box-omar nav{
+    margin-right:30% ;
+        left: 100px;
+        font-size: larger;
+        padding-left: 50px;
+        font-weight: bold;
+}
+
+.but-omar {
+    flex: 1;
+    display: flex;
+    gap: 15px;
+}
+.but-omar button{
+        background-color:rgba(255, 255, 255,0.8) ;
+        text-decoration: none;
+        padding: 8px 20px;
+        border: none;
+        border-radius: 25px;
+        transition:  all 0.3s;
+        font-weight:bold ;
+    }
+.but-omar button:hover{
+        background-color: rgba(0,0,0,0.8);
+        transform: scale(1.1);
+    }
+.but-omar button a {
+        color: #000000;
+        text-decoration: none;
+        width: 100%;
+        height: 100%;
+}
+.but-omar button a:hover{
+        color: #1582ff;
+}
+/* تصميم حقل البحث */
+
+ul {
+    list-style-type: none;
+}
+
+/* القائمة الجانبية */
+.sidebar  {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top:7%;
+    background-color: #000000;
+    right: 0;
+    transition:width 0.5s ease;
+    padding-top: 0;
+    box-shadow: -3px 0 10px rgba(0,0,0,0.5);
+    z-index: 999;
+}
+.sidebar a {
+    padding: 10px 20px ;
+    text-decoration: none;
+    font-size: 22px;
+    color: #ffffff;
+    display: block;
+    transition: background-color 0.3s ease  ;
+}
+
+.sidebar a:hover {
+    background-color: #575757;
+}
+/* زر القائمة */
+
+body.sidebar-open {
+    overflow: hidden;
+}
+.hamburger {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    cursor: pointer;
+    z-index: 1001;
+    right: 200px;
+}
+
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+    }
+
+        body {
+            background-origin: content-box;
+            text-align: center;
+            background:linear-gradient(135deg,white,rgb(152, 149, 149));
+            background-size: cover;
+            font-family: 'Roboto',sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            margin: 2%;
+            color:rgb(22, 11, 227);
+        }
+        .container {
+            width: 80%;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h2 {
+            margin-bottom: 30px;
+        }
+        h4 {
+            color: #007BFF;
+            font-size: 24px; 
+            font-weight: bold; 
+            text-transform: uppercase;
+            margin-bottom: 20px; 
+            padding-bottom: 5px; 
+}
+
+        img {
+            display:table-cell;
+            width: 600px;
+            height: 400px;
+            border-radius: 16px;
+            margin-bottom: 30px;
+        }
+        p {
+            max-width: 600px;
+            margin: 0 auto 10px;
+            text-align: justify;
+            line-height: 1.6;
+        }
+        .container a {
+            color:  rgb(20, 137, 233);
+            padding: 5px 10px;
+            text-decoration: none;
+            border-radius: 5px;
+            
+        }
+        .container a:hover {
+            color: blue;
+        }
+        .container button {
+            padding: 5px;
+            border-radius: 12px;
+            box-shadow: 0 5px 6px rgba(0,0, 0, 0.5);
+            cursor: pointer;
+            margin: 15px;
+            border: none;
+            transition: all 0.3s ease;
+        }
+        .container button:hover {
+            transition: all 0.3s;
+            background-color: bisque;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="box-omar">
+        <nav>travel🌍</nav>
+<ul class="but-omar">
+    <button><li><a href="/home/home.html"><i class="fas fa-home"></i></a></li></button>
+    <button><li><a href="/about/about.html">About</a></li></button>
+    <button><li><a href="/Services/ser.html">Services</a></li></button>
+    <button><li><a href="/contact us/contact us.html">Contact Us</a></li></button>
+    
+</ul>
+    
+    <div id="mySidebar" class="sidebar">
+        <a href="/login/Login.html">Login</a>
+        <a href="/Europe/Europe.html" >Europe</a>
+        <a href="/Middle East/project/OMG.html" >Middle East</a>
+        <a href="/Southeast-Asia/Southeast-Asia.html" >Southeast Asia</a>
+    </div>
+    <div class="hamburger" id="hamburger">
+        <i class="fas fa-bars"></i>
+    </div>
+</div>
+
+
+
+    <h1>Welcome to Turkey`s Highlights</h1>
+
+<div class="container">
+    <h4>Topkapi Palace</h4>
+    <img src="https://i.pinimg.com/736x/a0/68/86/a06886a46c11622ca6e421314b00cb5b.jpg" alt="tower">
+    
+    <p>Topkapi Palace is a historic symbol of the Ottoman Empire. Built in the 15th century, it served as the sultans' 
+        residence for centuries. Now a museum, it showcases treasures like imperial jewels and religious relics, offering
+        a glimpse into Ottoman history.<a href="https://en.wikipedia.org/wiki/Topkap%C4%B1_Palace">more info</a>
+    </p>
+<a href="/Europe/Booking Hotel/turki/Topkapi Palace.html"><button>BOOK NOW</button></a>
+    <h4>Princes' Islands</h4>
+    <img src="https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcSV_9vrsc-o74BPCSKAKogWVF0IaokHQk4B_0V4IcBijdCtNPxI6gbbgrdppezwQkyy54EbMeSzUrTrwj7JGexSDqEfk9Wineja3ruLJQ" alt="Islands">
+    <p>The Princes' Islands are a group of serene islands near Istanbul, offering a peaceful escape from the city's hustle.
+        Known for their car-free streets and charming views, the islands are perfect for relaxing walks or cycling.
+        Visitors can enjoy stunning landscapes, historic mansions, and delicious seafood, making them a must-visit destination.
+        <a href="https://en.wikipedia.org/wiki/Princes%27_Islands">more info</a>
+    </p>
+    <a href="/Europe/Booking Hotel/turki/Princes' Islands.html"><button>BOOK NOW</button></a>
+    <h4>Blue Mosque</h4>
+    <img src="/Europe/images/2044425.jpg" alt="Mosque">
+    <p>The Blue Mosque, also known as the Sultan Ahmed Mosque, is one of Istanbul's most iconic landmarks. Built in the 17th century,
+        it is famous for its stunning blue tiles, grand domes, and six minarets. The mosque remains a place of worship and a symbol of 
+        Ottoman architectural brilliance.<a href="https://en.wikipedia.org/wiki/Blue_Mosque,_Istanbul"> more info</a>
+    </p>
+    <a href="/Europe/Booking Hotel/turki/Blue Mosque.html"><button>BOOK NOW</button></a>
+</div>
+
+<script>
+    function toggleSidebar() {
+  const sidebar =document.getElementById("mySidebar");
+  const body =document.body;
+  if(sidebar.style.width === "250px") {
+    sidebar.style.width ="0";
+    body.classList.remove("sidebar-open");
+  } else {
+    sidebar.style.width = "250px";
+    body.classList.add("sidebar-open");
+  }
+  }
+  const hamburger = document.getElementById('hamburger');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    toggleSidebar(); // دالة فتح/إغلاق القائمة الجانبية لديك
+  });
+
+  
+</script>
+</body>
+
+</html>

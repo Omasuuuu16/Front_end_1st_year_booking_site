@@ -1,0 +1,88 @@
+.lobster-regular {
+    font-family: "Lobster", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }  
+
+body {
+    position: relative;
+    z-index: 0; 
+    color: #333;
+    background-color: #fff;
+  }
+  
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: url('explor.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    filter: blur(4px);        
+    -webkit-filter: blur(4px); 
+    z-index: -1;              
+  }
+  
+  .Login-body,
+  .signup-body,
+  .welcome,
+  .Login-form,
+  .signup-form2 {
+    position: relative;
+    z-index: 1;
+  }
+  
+
+/* login/signup */
+.Login-body, .signup-body {
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.Login-form, .signup-form2 {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    width: 400px;
+}
+
+.Login-form h1, .signup-form2 h1 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+input[type="email"], input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+}
+
+.submit, .sign-bott {
+    background-color: #0077b6;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+}
+
+.submit:hover, .sign-bott:hover {
+    background-color: #023e8a;
+}
+
+/* welcome_page */
+.welcome {
+    font-size: 3rem;
+    color: rgb(255, 255, 255);
+}

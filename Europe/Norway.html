@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8"> 
+    <meta 
+        name="viewport"
+        content="width=device-width,initial-scale=1.0"> 
+    <title>Norway Highlights</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+
+    <style>
+    
+    .box-omar{
+    background-color:rgb(60, 60, 65);
+    color: #ffffff;
+    font-size: 22px;
+    font-family: "Dancing Script", cursive;
+    padding: 10px 20px;
+    position:sticky;
+    top:0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    display:inline-flex;
+    align-items: center;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000 ;
+}
+
+.box-omar nav{
+    margin-right:30% ;
+        left: 100px;
+        font-size: larger;
+        padding-left: 50px;
+        font-weight: bold;
+}
+
+.but-omar {
+    flex: 1;
+    display: flex;
+    gap: 15px;
+}
+.but-omar button{
+        background-color:rgba(255, 255, 255,0.8) ;
+        text-decoration: none;
+        padding: 8px 20px;
+        border: none;
+        border-radius: 25px;
+        transition:  all 0.3s;
+        font-weight:bold ;
+    }
+.but-omar button:hover{
+        background-color: rgba(0,0,0,0.8);
+        transform: scale(1.1);
+    }
+.but-omar button a {
+        color: #000000;
+        text-decoration: none;
+        width: 100%;
+        height: 100%;
+}
+.but-omar button a:hover{
+        color: #1582ff;
+}
+/* تصميم حقل البحث */
+
+ul {
+    list-style-type: none;
+}
+
+/* القائمة الجانبية */
+.sidebar  {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top:7%;
+    background-color: #000000;
+    right: 0;
+    transition:width 0.5s ease;
+    padding-top: 0;
+    box-shadow: -3px 0 10px rgba(0,0,0,0.5);
+    z-index: 999;
+}
+.sidebar a {
+    padding: 10px 20px ;
+    text-decoration: none;
+    font-size: 22px;
+    color: #ffffff;
+    display: block;
+    transition: background-color 0.3s ease  ;
+}
+
+.sidebar a:hover {
+    background-color: #575757;
+}
+/* زر القائمة */
+
+body.sidebar-open {
+    overflow: hidden;
+}
+.hamburger {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    cursor: pointer;
+    z-index: 1001;
+    right: 200px;
+}
+
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+    }
+
+        body {
+            background-origin: content-box;
+            text-align: center;
+            background:linear-gradient(135deg,white,rgb(152, 149, 149));
+            background-size: cover;
+            font-family: 'Roboto',sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            margin: 2%;
+            color:rgb(22, 11, 227);
+        }
+        .container {
+            width: 80%;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h2 {
+            margin-bottom: 30px;
+        }
+        h4 {
+            color: #007BFF;
+            font-size: 24px; 
+            font-weight: bold; 
+            text-transform: uppercase;
+            margin-bottom: 20px; 
+            padding-bottom: 5px; 
+}
+
+        img {
+            display:table-cell;
+            width: 600px;
+            height: 400px;
+            border-radius: 16px;
+            margin-bottom: 30px;
+        }
+        p {
+            max-width: 600px;
+            margin: 0 auto 10px;
+            text-align: justify;
+            line-height: 1.6;
+        }
+        .container a {
+            color:  rgb(20, 137, 233);
+            padding: 5px 10px;
+            text-decoration: none;
+            border-radius: 5px;
+            
+        }
+        .container a:hover {
+            color: blue;
+        }
+        .container button {
+            padding: 5px;
+            border-radius: 12px;
+            box-shadow: 0 5px 6px rgba(0,0, 0, 0.5);
+            cursor: pointer;
+            margin: 15px;
+            border: none;
+            transition: all 0.3s ease;
+        }
+        .container button:hover {
+            transition: all 0.3s;
+            background-color: bisque;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div class="box-omar">
+        <nav>travel🌍</nav>
+<ul class="but-omar">
+    <button><li><a href="/home/home.html"><i class="fas fa-home"></i></a></li></button>
+    <button><li><a href="/about/about.html">About</a></li></button>
+    <button><li><a href="/Services/ser.html">Services</a></li></button>
+    <button><li><a href="/contact us/contact us.html">Contact Us</a></li></button>
+    
+</ul>
+    
+    <div id="mySidebar" class="sidebar">
+        <a href="/login/Login.html">Login</a>
+        <a href="/Europe/Europe.html" >Europe</a>
+        <a href="/Middle East/project/OMG.html" >Middle East</a>
+        <a href="/Southeast-Asia/Southeast-Asia.html" >Southeast Asia</a>
+    </div>
+    <div class="hamburger" id="hamburger">
+        <i class="fas fa-bars"></i>
+    </div>
+</div>
+
+    <h1>Welcome to Norway's Highlights</h1>
+
+<div class="container">
+    <h4>Geiranger Fjord</h4>
+    <img src="https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcRZFmQOE4KqxDlHfNT3vV91atjgCJ6he581DFITlMgysyfdSZOgp2eFR3LEpHrHwNYQDOSHUMJHl8jk514na9PaA2vHiHRmW5nXZvf29A" alt="Geiranger Fjord">
+    
+    <p>Geiranger Fjord, a UNESCO World Heritage site, is a natural wonder of Norway. Surrounded by dramatic cliffs and
+        cascading waterfalls, it offers breathtaking scenery, perfect for cruising and exploring nature.
+        <a href="https://en.wikipedia.org/wiki/Geirangerfjord">more info</a>
+    </p>
+    <a href="/Europe/Booking Hotel/Norway/Geiranger Fjord.html"><button>BOOK NOW</button></a> 
+
+    <h4>Trolltunga</h4>
+    <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4noHbCSlPlPTHxDeL436o5HWfM1JA93KDPVRp9k5CZpI_O7K6M6bn1urcCyp6GJHO8LLMnI55rKyWsoGCZNRqZbDPP4LYOMGqxbU5g7emFayk204qmw-33DFD8Y53BN2eKNLlIT8=w675-h390-n-k-no" alt="Trolltunga">
+    <p>Trolltunga, or "The Troll's Tongue," is one of Norway's most famous hiking destinations. This stunning rock formation
+        juts out over a breathtaking valley, offering panoramic views for adventurous travelers.
+        <a href="https://en.wikipedia.org/wiki/Trolltunga">more info</a>
+    </p>
+    <a href="/Europe/Booking Hotel/Norway/Trolltunga.html"><button>BOOK NOW</button></a>
+    <h4>Northern Lights in Tromsø</h4>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Northern_lights_in_Tromsoe.jpg" alt="Northern Lights">
+    <p>Tromsø is renowned for being one of the best places to experience the Northern Lights. This Arctic city combines stunning natural
+        phenomena with cultural attractions, making it a must-visit destination in Norway.
+        <a href="https://en.wikipedia.org/wiki/Troms%C3%B8">more info</a>
+    </p>
+     <a href="/Europe/Booking Hotel/Norway/Northern Lights in Tromsø.html"><button>BOOK NOW</button></a>
+</div>
+<script>
+    function toggleSidebar() {
+  const sidebar =document.getElementById("mySidebar");
+  const body =document.body;
+  if(sidebar.style.width === "250px") {
+    sidebar.style.width ="0";
+    body.classList.remove("sidebar-open");
+  } else {
+    sidebar.style.width = "250px";
+    body.classList.add("sidebar-open");
+  }
+  }
+  const hamburger = document.getElementById('hamburger');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    toggleSidebar(); // دالة فتح/إغلاق القائمة الجانبية لديك
+  });
+
+  
+</script>
+</body>
+</html>

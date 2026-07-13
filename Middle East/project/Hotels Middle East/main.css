@@ -1,0 +1,232 @@
+.Nav-bar{
+    background-color: #000000;
+    color: aliceblue;
+    font-size: 30px;
+    font-family: "Dancing Script",cursive;
+    border-bottom: 0px solid #000000 ;
+    padding: 10px;
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    display: flex;
+    z-index: 10;
+}
+    nav{
+        text-align: left;
+        margin-left:40px;
+        margin-top:9px;
+        flex: 0.5;
+    }
+    button{
+        background-color:rgb(255, 255, 255) ;
+        text-decoration: none;
+        padding: 5px 15px;
+        color: black;
+        border: 1px solid black;
+        cursor:pointer;
+        border-radius: 10px;
+        transition: background-color 0.7s,
+                    color 0.5s,
+                    padding .7s;
+    }
+    button:hover{
+        background-color: rgb(73, 73, 73);
+        padding: 8px 14px;
+        text-decoration:none;
+        color:#000000
+    }
+    a {
+        color: #000000;
+        text-decoration: none;
+    }
+    a:hover{
+        color: #000000;
+        text-decoration:none;
+    }
+    /* Sidebar code */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 8%;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 10px;
+    z-index: 10;
+}
+.sidebar a {
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 22px;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #575757;
+}
+.hamburger {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 26px;
+    color: white;
+    cursor: pointer;
+    z-index: 10;
+}
+
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+  
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e9e9e9;
+    padding: 20px;
+}
+  
+.hotel-card-ss {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height:50% ;
+    margin: 70px auto 30px auto; /* center the card */
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    transform: scale(1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+  
+.hotel-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
+}
+  
+  /* Image slider */
+.image-slider-ss {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+  
+.image-slider-ss img {
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+  
+.image-slider-ss img.active {
+    opacity: 1;
+}
+  
+.hotel-info-ss {
+    padding: 20px;
+}
+  
+.hotel-info-ss h2 {
+    font-size: 26px;
+    margin-bottom: 6px;
+}
+  
+.location-ss {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 5px;
+}
+  
+.stars-ss {
+    color: #f39c12;
+    margin-bottom: 10px;
+}
+  
+.description-ss {
+    font-size: 15px;
+    color: #555;
+    margin-bottom: 15px;
+}
+  
+.hotel-price-ss {
+    font-size: 18px;
+    font-weight: bold;
+    color: #e67e22;
+    margin-bottom: 15px;
+}
+  
+.book-btn-ss {
+    padding: 12px 24px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+    text-decoration: none;
+}
+  
+.book-btn-ss:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+  
+.book-btn-ss:active {
+    transform: scale(0.95);
+}
+  
+  /* Animation */
+@keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+}
+  
+@media (max-width: 768px) {
+.image-slider img {
+      height: 200px;
+}
+  
+.hotel-info {
+      padding: 15px;
+}
+  
+.hotel-info h2 {
+      font-size: 20px;
+}
+/*feature section*/
+}
+.features-ss {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #333;
+}
+  
+.features-ss span {
+    background: #f0f0f0;
+    padding: 6px 10px;
+    border-radius: 8px;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+}
+  

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+</head>
+<body class="signup-body">
+    <div class="container">
+        <form class="signup-form2">
+            <h1>Sign Up</h1>
+            <label for="Username" class="USN">Username</label>
+            <input type="text" placeholder="Username" id="s-username" required>
+            <label for="Email" class="Email">Email</label>
+            <input type="email" placeholder="Email" id="s-email" required>
+            <label for="Password" class="Password">Password</label>
+            <input type="password" placeholder="Password" id="s-psswd" required>
+            <label for="Confirm Password" class="CP">Confirm</label>
+            <input type="password" placeholder="Confirm Password" required>
+            <button type="button" onclick="storeData()" class="sign-bott">Sign Up</button>
+        </form>
+    </div>
+</body>
+<script>
+    function storeData(){
+        let name, email, password;
+        name = document.getElementById("s-username").value;
+        email = document.getElementById("s-email").value;
+        password = document.getElementById("s-psswd").value;
+        let users_array = JSON.parse(localStorage.getItem("users")) ? JSON.parse(localStorage.getItem("users")) : [];
+        if(users_array.some((v) => v.email == email)){
+            alert("This email already exists. Login instead.");
+        } else {
+            users_array.push({ "name": name, "email": email, "password": password });
+            localStorage.setItem("users", JSON.stringify(users_array));
+            window.location.href = "/login/Login.html";
+        }
+    }
+</script>
+</html>

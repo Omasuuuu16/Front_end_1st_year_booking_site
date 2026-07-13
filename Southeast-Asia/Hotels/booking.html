@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hotel Booking</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container">
+    <h1>Hotel Booking</h1>
+    <form id="hotel-booking-form">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" placeholder="Enter your name" required/>
+
+      <label for="check-in">Check-in Date:</label>
+      <input type="date" id="check-in" required />
+
+      <label for="check-out">Check-out Date:</label>
+      <input type="date" id="check-out" required/>
+
+      <label for="room-type">Room Type:</label>
+      <select id="room-type" required>
+        <option value="single">Single Room</option>
+        <option value="double">Double Room</option>
+        <option value="suite">Suite</option>  
+      </select>
+      <label for="room-view">Room View</label>
+      <select id="room-view" required>
+        <option value="sea">Sea View</option>
+        <option value="city">City View</option>
+        <option value="garden">Garden View</option>
+      </select>
+
+      <button type="submit">Book Now</button>
+    </form>
+
+    <div id="confirmation-message" style="display: none;">
+      <h3>Booking Confirmed!</h3>
+      <p>Name: <span id="customer-name"></span></p>
+      <p>Check-in: <span id="customer-check-in"></span></p>
+      <p>Check-out: <span id="customer-check-out"></span></p>
+      <p>Room Type: <span id="customer-room-type"></span></p>
+      <p>Room View: <span id="customer-room-view"></span></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

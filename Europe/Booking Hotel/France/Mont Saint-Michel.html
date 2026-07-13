@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hotel Booking - France</title>
+  <link rel="stylesheet" href="main.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  
+  <div class="Nav-bar">
+      <nav>Travel</nav>
+      <div class="button">
+          <button><a class="button" href="/home/home.html">Home</a></button>
+          <button><a class="button" href="/about/about.html">About</a></button>
+          <button><a class="button" href="/Services/ser.html">Services</a></button>
+          <button><a class="button" href="/contact us/contact us.html">Contact us</a></button>
+      </div>
+  </div>
+
+  <div class="hotel-card-ss fade-in">
+    <div class="image-slider-ss">
+      <img src="/Europe/Booking Hotel/img3/Mont Sant 1.jpg" alt="Hotel image 1">
+      <img src="/Europe/Booking Hotel/img3/Mont Sant 2.jpg" alt="Hotel image 2">
+      <img src="/Europe/Booking Hotel/img3/Mont Sant 3.jpg" alt="Hotel image 3">
+      <img src="/Europe/Booking Hotel/img3/Mont Sant 4.jpg" alt="Hotel image 3">
+    </div>
+    <div class="hotel-info-ss">
+      <h2>Mercure Mont Saint Michel</h2>
+      <p class="location-ss">📍 Mont Saint Michel, France</p>
+      <p class="stars-ss">⭐⭐⭐⭐</p>
+      <p class="description-ss">
+        Located just a short distance from the iconic Mont Saint Michel, this hotel offers comfortable accommodations with modern amenities. Guests can enjoy an on-site restaurant, bar, and free parking. The hotel is perfect for travelers looking to explore the historic site and its surrounding areas.
+      </p>
+      <div class="features-ss">
+        <span>📶 Free Wi-Fi</span>
+        <span>🍽️ Restaurant</span>
+        <span>🏎👷 Close to Mont Saint Michel</span>
+        <span>🚗 Free Parking</span>
+      </div>
+      <p class="hotel-price-ss">$180 per night</p>
+      <a href="booking.html" class="book-btn-ss" onclick="bookHotel('Mercure Mont Saint Michel')">Book Now</a>
+    </div>
+  </div>
+
+  <div class="hotel-card-ss fade-in">
+    <div class="image-slider-ss">
+      <img src="/Europe/Booking Hotel/img3/Le Relais 1.jpg" alt="Hotel image 1">
+      <img src="/Europe/Booking Hotel/img3/Le Relais 2.jpg" alt="Hotel image 2">
+      <img src="/Europe/Booking Hotel/img3/Le Relais 3.jpg" alt="Hotel image 3">
+      <img src="/Europe/Booking Hotel/img3/Le Relais 4.jpg" alt="Hotel image 3">
+    </div>
+    <div class="hotel-info-ss">
+      <h2>Le Relais Du Roy</h2>
+      <p class="location-ss">📍 Mont Saint Michel, France</p>
+      <p class="stars-ss">⭐⭐⭐</p>
+      <p class="description-ss">
+        Le Relais Du Roy offers charming accommodations close to Mont Saint Michel. The hotel features cozy rooms, a gourmet restaurant, and a terrace with scenic views. Guests can also take advantage of the shuttle service to the Mont.
+      </p>
+      <div class="features-ss">
+        <span>📶 Free Wi-Fi</span>
+        <span>🍽️ Gourmet Restaurant</span>
+        <span>🚌 Shuttle Service</span>
+        <span>🏟 Scenic Views</span>
+      </div>
+      <p class="hotel-price-ss">$150 per night</p>
+      <a href="booking.html" class="book-btn-ss" onclick="bookHotel('Le Relais Du Roy')">Book Now</a>
+    </div>
+  </div>
+
+  <script>
+    document.querySelectorAll('.image-slider-ss').forEach(slider => {
+      const images = slider.querySelectorAll('img');
+      let index = 0;
+      if (images.length > 0) {
+        images[0].classList.add('active');
+      }
+      setInterval(() => {
+        images[index].classList.remove('active');
+        index = (index + 1) % images.length;
+        images[index].classList.add('active');
+      }, 3000); // change image every 3 seconds
+    });
+  </script>
+</body>
+</html>

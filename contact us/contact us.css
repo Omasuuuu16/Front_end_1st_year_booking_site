@@ -1,0 +1,142 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+/* Navigation bar code */
+.Nav-bar{
+    background-color: #000000;
+    color: aliceblue;
+    font-size: 30px;
+    font-family: "Dancing Script",cursive;
+    padding: 8px;
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    width: 99%;
+    display: flex;
+    z-index: 10;
+}
+    nav{
+        text-align: left;
+        margin-left:0px;
+        margin-top:9px;
+        flex: 0.5;
+    }
+    button{
+        background-color:rgb(255, 255, 255) ;
+        text-decoration: none;
+        padding: 5px 15px;
+        color: black;
+        border: 1px solid black;
+        cursor:pointer;
+        border-radius: 10px;
+        transition: background-color 0.7s,
+                    color 0.5s,
+                    padding .7s;
+    }
+    button:hover{
+        background-color: rgb(73, 73, 73);
+        padding: 10px 15px;
+        text-decoration:none;
+        color:#058c17
+    }
+    a {
+        color: #000000;
+        text-decoration: none;
+    }
+    a:hover{
+        text-decoration:none;
+    }
+    /* Sidebar code */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 8%;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 10px;
+    z-index: 10;
+}
+.sidebar a {
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 22px;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #575757;
+}
+.hamburger {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 26px;
+    color: white;
+    cursor: pointer;
+    z-index: 10;
+}
+    .contact-kh{
+        padding-left: 15px;
+        padding-top: 55px;
+    }
+    h1{
+        font-size: 40px;
+    }
+    p{
+        font-size: 20px ;
+    } 
+    .feedback-kh{
+        color: rgb(255, 0, 0);
+        font-weight: 700;
+        margin-bottom: 30px;
+    }
+    .contact-form-kh{
+        margin: 50px 50px 50px 0;
+    }
+    label{
+        display: block;
+        padding-left: 5px;
+        margin-bottom: 10px;
+        font-size: 20px;
+    }
+    input,textarea{
+        background-color: white;
+        font-size : 25px;
+        margin-bottom: 20px;
+        padding: 5px;
+        width: 480px ;
+        border-color: light-dark(rgba(117, 117, 117, 0.4), rgb(133, 133, 133));
+    }
+    textarea{
+        display: block;
+        height: 150px;
+    }
+    .send-kh{
+        font-size: 22px;
+        width: 256px;
+        height: 64px;
+        background-color: #000000;
+        color: #ffffff;
+    }
+    .send-kh:hover{
+        cursor: pointer;
+        background-color: #000000dd;
+    }
+    footer{
+        padding: 10px;
+        height: 64px;
+        background-color: #000000;
+        text-align: center;
+    }
+    footer p{
+        color: #ffffff;
+    }

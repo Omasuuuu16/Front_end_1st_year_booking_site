@@ -1,0 +1,290 @@
+.box-omar{
+    background-color:none;
+    color: #ffffff;
+    font-size: 22px;
+    font-family: "Dancing Script", cursive;
+    padding: 10px 20px;
+    position:sticky;
+    top:0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    display:flex;
+    align-items: center;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000 ;
+}
+
+.box-omar nav{
+        font-size: larger;
+        flex: 1;
+        padding-left: 50px;
+        font-weight: bold;
+}
+
+.but-omar {
+    flex: 1.5;
+    display: flex;
+    gap: 15px;
+}
+.but-omar button{
+        background-color:rgba(255, 255, 255,0.8) ;
+        text-decoration: none;
+        padding: 8px 20px;
+        border: none;
+        border-radius: 25px;
+        transition:  all 0.3s;
+        font-weight:bold ;
+    }
+.but-omar button:hover{
+        background-color: rgba(0,0,0,0.8);
+        transform: scale(1.1);
+    }
+.but-omar button a {
+        color: #000000;
+        text-decoration: none;
+        width: 100%;
+        height: 100%;
+}
+.but-omar button a:hover{
+        color: #1582ff;
+}
+/* تصميم حقل البحث */
+
+ul {
+    list-style-type: none;
+}
+
+/* القائمة الجانبية */
+.sidebar  {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top:60px;
+    background:linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), none ;
+    right: 0;
+    transition:width 0.5s ease;
+    padding-top: 0;
+    box-shadow: -3px 0 10px rgba(0,0,0,0.5);
+    z-index: 999;
+}
+.sidebar a {
+    text-align: center;
+    padding: 10px 20px ;
+    text-decoration: none;
+    font-size: 22px;
+    color: #ffffff;
+    display: block;
+    transition: background-color 0.3s ease  ;
+}
+
+.sidebar a:hover {
+    background-color: #575757;
+}
+/* زر القائمة */
+
+body.sidebar-open {
+    overflow: hidden;
+}
+.hamburger {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    cursor: pointer;
+    z-index: 1001;
+    right: 200px;
+}
+
+
+
+
+/* ضبط اعدادات الخلفية والخط */
+
+    header {
+        color: #bdcce0;
+        font-family:f;
+        font-style: italic;
+        position: absolute;
+        font-size: 50px;
+        top: 10%;
+        left: 47%;
+    }
+
+    h4 {
+        font-family: 'Dancing Script', cursive;
+        position: absolute;
+        top: 20%;
+        left: 30%;
+        font-size:x-large;
+        color: #9eb055;
+    }
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+    }
+
+    body{ 
+        font-family:'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+        background:linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('images/dd.jpg') ;
+        background-size: cover;
+        background-origin: content-box;
+        min-height: 100vh;
+        color: white;
+    }
+
+/* تصميم بطاقة الوجهة */
+    .destination-card {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+        gap: 2rem;
+        padding: 300px 2rem 2rem  ;
+        max-width: 1200px;
+        margin:  auto;
+    }
+
+
+/* تصميم عناصر البطاقة */
+    .card {
+        background: none;
+        border-radius: 15px;
+        text-align:center;
+        padding: 2rem;
+        transition:all 0.3s ease;
+        box-shadow: 0 20px 16px rgba(0, 0, 0, 0.5);
+        position: relative;
+        overflow: hidden;
+        color: #2c3e50;
+        animation:fadeInDown 0.5s ease-out forwards ;
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    @keyframes fadeInDown {
+        0% {
+        opacity: 0;
+        transform: translateY(-50px);
+        }
+        80% {
+        opacity: 1;
+          transform: translateY(45px); /* طنطنة (ارتداد خفيف) */
+        }
+        100% {
+        opacity: 1;
+          transform: translateY(0); /* ثبات في النهاية */
+        }
+    }
+    .card:nth-child(1) { animation-delay: 0.3s; }
+    .card:nth-child(2) { animation-delay: 1.2s; }
+    .card:nth-child(3) { animation-delay: 0.6s; }
+    .card:nth-child(4) { animation-delay: 0.6s; }
+    .card:nth-child(5) { animation-delay: 1.1s; }
+    .card:nth-child(6) { animation-delay: 0.3s; }
+
+
+    .card-content {
+    position: relative;
+    transition: transform 0.5s ease;
+}
+
+
+    .card-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 2rem;
+        opacity: 0;
+        transition: all 0.5s ease;
+        transform: translateY(100%);
+    }
+
+
+    .card:hover  .card-overlay {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+
+    .card:hover .card-content {
+        transform: translateY(0);
+    }
+
+
+    .card img {
+        width: auto;
+        height: 100px;
+        border-radius: 7px;
+        margin: 0 auto 1.5rem;
+}
+
+    .card h3 {
+        color: #638eec;
+        margin-bottom: 1rem;
+        font-size: 1.8rem;
+    }
+
+
+    .card-overlay p {
+        color: white;
+        font-size: 1.1rem;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+        transform: translateY(30px);
+        transition: all 0.5s ease;
+        opacity: 0;
+    }
+
+    
+    .explore-btn {
+        background: #2563eb;
+        color: white;
+        border: none;
+        padding: 12px 30px;
+        border-radius: 25px ;
+        cursor: pointer;
+        font-size: 1.1rem;
+        transition: all 0.3s ease;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+
+    .card:hover .card-overlay p,
+    .card:hover .explore-btn {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+
+    .explore-btn:hover {
+        background: #1e40af;
+        transform: scale(1.05);
+    }
+
+
+    @media (max-width: 768px) {
+        .hamburger {
+            display: block;
+        }
+        
+        .card {
+            padding: 1.5rem;
+        }
+    }
+
+
+    footer {
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: 20px;
+        color: #ccc;
+    }
